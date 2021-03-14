@@ -7,7 +7,7 @@
 // Lecturer: Gary
 // Notes to Grader: <optional extra notes>
 
-public interface CityInterface {
+public interface CityInterface extends Comparable<CityInterface> {
 
   public String getCity();
   public String getState();
