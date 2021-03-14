@@ -1,0 +1,541 @@
+City,State,Country,Cost of Living Index
+Hamilton,,Bermuda,145.43
+Zurich,,Switzerland,141.25
+Geneva,,Switzerland,134.83
+Basel,,Switzerland,130.68
+Bern,,Switzerland,128.03
+Lausanne,,Switzerland,127.5
+Reykjavik,,Iceland,123.78
+Stavanger,,Norway,118.61
+Lugano,,Switzerland,118.24
+Oslo,,Norway,117.23
+Trondheim,,Norway,114.22
+Bergen,,Norway,112.31
+Kyoto,,Japan,100.33
+New York,NY,United States,100
+Nassau,,Bahamas,99.73
+San Francisco,CA,United States,97.84
+Copenhagen,,Denmark,97.62
+Luxembourg,,Luxembourg,95.37
+Anchorage,AK,United States,94.99
+Honolulu,HI,United States,94.15
+Tokyo,,Japan,93.81
+Brooklyn,NY,United States,93.79
+Paris,,France,92.87
+Limerick,,Ireland,92.73
+Rockville,MD,United States,92.66
+Bloomington,IN,United States,92.14
+Washington,DC,United States,91.94
+Arhus,,Denmark,91.9
+Singapore,,Singapore,91.4
+Aalborg,,Denmark,91.17
+Stockholm,,Sweden,90.85
+Sydney,,Australia,90.77
+Montpellier,,France,90.63
+Tel Aviv-Yafo,,Israel,90.36
+Santa Rosa,CA,United States,90.23
+Dublin,,Ireland,89.92
+Jerusalem,,Israel,89.62
+Linz,,Austria,89.33
+Arlington,VA,United States,89.2
+Amsterdam,,Netherlands,89.14
+Bellevue,WA,United States,88.85
+London,,United Kingdom,88.69
+Antwerp,,Belgium,88.2
+Hamilton,,New Zealand,88.09
+Seattle,WA,United States,88.04
+Berkeley,CA,United States,87.82
+Helsinki,,Finland,87.77
+Grenoble,,France,87.73
+Seoul,,South Korea,87.56
+Tampere,,Finland,87.2
+Boston,MA,United States,87.05
+Auckland,,New Zealand,86.93
+Florence,,Italy,86.9
+Nice,,France,86.69
+Milton Keynes,,United Kingdom,86.28
+Perth,,Australia,86.24
+Charleston,SC,United States,86.19
+Adelaide,,Australia,86.02
+Miami,FL,United States,86.01
+Bath,,United Kingdom,85.79
+Reading,,United Kingdom,85.56
+Leuven,,Belgium,85.31
+Gent,,Belgium,85.16
+Melbourne,,Australia,85.15
+Oakland,CA,United States,85.11
+Milan,,Italy,85.1
+Genoa,,Italy,85.04
+Darwin,,Australia,84.98
+Cairns,,Australia,84.98
+The Hague (Den Haag),,Netherlands,84.97
+Munich,,Germany,84.78
+Lyon,,France,84.47
+Gothenburg,,Sweden,84.38
+New Haven,CT,United States,84.13
+Irvine,CA,United States,83.73
+Brussels,,Belgium,83.65
+Philadelphia,PA,United States,83.46
+Utrecht,,Netherlands,83.34
+Aberdeen,,United Kingdom,83.18
+Cambridge,,United Kingdom,82.96
+Cork,,Ireland,82.89
+Hobart,,Australia,82.88
+San Jose,CA,United States,82.87
+Toulouse,,France,82.85
+Ramat Gan,,Israel,82.84
+Rotterdam,,Netherlands,82.64
+Tacoma,WA,United States,82.54
+Dusseldorf,,Germany,82.48
+Los Angeles,CA,United States,82.3
+Boulder,CO,United States,82.19
+St. John's,NL,Canada,82.18
+Turku,,Finland,82.18
+Brisbane,,Australia,82.17
+Halifax,,Canada,82.03
+Thunder Bay,,Canada,81.98
+Haifa,,Israel,81.81
+Padova,,Italy,81.77
+Frankfurt,,Germany,81.65
+Portland,ME,United States,81.6
+Minneapolis,MN,United States,81.46
+Norfolk,VA,United States,81.36
+Saskatoon,,Canada,81.02
+Canberra,,Australia,80.9
+Wellington,,New Zealand,80.87
+Hartford,CT,United States,80.86
+Queens,NY,United States,80.77
+Hamburg,,Germany,80.75
+Parma,,Italy,80.69
+Maastricht,,Netherlands,80.69
+Graz,,Austria,80.59
+Christchurch,,New Zealand,80.51
+Galway,,Ireland,80.22
+Albany,NY,United States,80.19
+Chicago,IL,United States,80.16
+Portsmouth,,United Kingdom,80.05
+Jersey City,NJ,United States,79.91
+Malmo,,Sweden,79.79
+Uppsala,,Sweden,79.7
+Lund,,Sweden,79.39
+Oxford,,United Kingdom,79.37
+Olympia,WA,United States,79.25
+Edinburgh,,United Kingdom,79.2
+Barrie,,Canada,79.18
+Santa Barbara,CA,United States,79.17
+Bologna,,Italy,79.04
+Eugene,OR,United States,78.94
+Sliema,,Malta,78.94
+Burlington,VT,United States,78.89
+Rome,,Italy,78.8
+Sacramento,CA,United States,78.75
+Eindhoven,,Netherlands,78.72
+Hong Kong,,Hong Kong,78.72
+Pittsburgh,PA,United States,78.66
+Vienna,,Austria,78.64
+Osaka,,Japan,78.5
+Portland,OR,United States,78.45
+Saint Paul,MN,United States,78.37
+Lille,,France,78.34
+Long Beach,CA,United States,78.23
+York,,United Kingdom,77.98
+Trieste,,Italy,77.97
+Brampton,,Canada,77.9
+Bristol,,United Kingdom,77.83
+Bergamo,,Italy,77.71
+Fort Lauderdale,FL,United States,77.67
+Everett,WA,United States,77.63
+Asheville,NC,United States,77.36
+Denver,CO,United States,77.31
+Heidelberg,,Germany,77.3
+Manchester,,United Kingdom,77.15
+Bellingham,WA,United States,77.13
+Newcastle,,Australia,77.12
+Melbourne,FL,United States,77.09
+San Diego,CA,United States,77.01
+Mannheim,,Germany,76.97
+Groningen,,Netherlands,76.64
+New Orleans,LA,United States,76.64
+Orlando,FL,United States,76.63
+Baltimore,MD,United States,76.57
+Tampa,FL,United States,76.53
+West Palm Beach,FL,United States,76.52
+Calgary,,Canada,76.44
+Brighton,,United Kingdom,76.4
+Red Deer,,Canada,76.15
+Edmonton,,Canada,76.01
+Nottingham,,United Kingdom,75.98
+Karlsruhe,,Germany,75.8
+Coventry,,United Kingdom,75.72
+Vancouver,,Canada,75.59
+Victoria,,Canada,75.47
+Colorado Springs,CO,United States,75.42
+Norwich,,United Kingdom,75.4
+Charlotte,NC,United States,75.35
+Plano,TX,United States,75.32
+Toronto,,Canada,75.22
+Atlanta,GA,United States,74.97
+Turin,,Italy,74.94
+Leeds,,United Kingdom,74.92
+Fayetteville,AR,United States,74.9
+Gold Coast,,Australia,74.89
+Kelowna,,Canada,74.78
+Indianapolis,IN,United States,74.72
+Birmingham,AL,United States,74.64
+Stuttgart,,Germany,74.53
+Berlin,,Germany,74.32
+Burlington,,Canada,74.32
+Sheffield,,United Kingdom,74.31
+Glasgow,,United Kingdom,74.3
+Augusta,GA,United States,74.29
+Greensboro,NC,United States,74.1
+Greenville,SC,United States,74.08
+Palma De Mallorca,,Spain,74.08
+Cologne,,Germany,74.02
+Bonn,,Germany,73.61
+Jacksonville,FL,United States,73.58
+Fort Collins,CO,United States,73.57
+Cleveland,OH,United States,73.47
+Bremen,,Germany,73.41
+Milwaukee,WI,United States,73.37
+Bilbao,,Spain,73.3
+Saint Petersburg,FL,United States,73.29
+Exeter,,United Kingdom,73.17
+Memphis,TN,United States,72.95
+Guelph,,Canada,72.93
+Syracuse,NY,United States,72.88
+Waterloo,,Canada,72.86
+Regina,,Canada,72.85
+Newark,NJ,United States,72.68
+Akron,OH,United States,72.65
+Dubai,,United Arab,72.58
+Nuremberg,,Germany,72.57
+Mississauga,,Canada,72.54
+Austin,TX,United States,72.46
+Leipzig,,Germany,72.4
+Taipei,,Taiwan,72.39
+Fresno,CA,United States,72.36
+Buffalo,NY,United States,72.15
+Shreveport,LA,United States,72.07
+Windsor,,Canada,72
+Nanaimo,BC,Canada,71.9
+Nashville,TN,United States,71.88
+Aachen,,Germany,71.81
+Moncton,,Canada,71.79
+Birmingham,,United Kingdom,71.6
+Cardiff,,United Kingdom,71.52
+Southampton,,United Kingdom,71.48
+Manchester,NH,United States,71.46
+Raleigh,NC,United States,71.4
+Little Rock,AR,United States,71.29
+Dresden,,Germany,71.22
+Winnipeg,,Canada,71.22
+Quebec City,,Canada,71.21
+Naples,,Italy,71.14
+Richmond,VA,United States,70.98
+Las Vegas,NV,United States,70.97
+Saint Louis,MO,United States,70.76
+Grand Rapids,MI,United States,70.58
+Rochester,NY,United States,70.52
+Houston,TX,United States,70.37
+Detroit,MI,United States,70.2
+Darmstadt,,Germany,70.17
+Ann Arbor,MI,United States,70.01
+Ottawa,,Canada,69.91
+Harrisburg,PA,United States,69.91
+Newcastle Upon Tyne,,United Kingdom,69.91
+Salem,OR,United States,69.81
+Dayton,OH,United States,69.76
+Barcelona,,Spain,69.75
+Columbia,SC,United States,69.7
+Marseille,,France,69.66
+Liverpool,,United Kingdom,69.53
+Hanover,,Germany,69.47
+Fort Wayne,IN,United States,69.42
+London,,Canada,69.39
+Des Moines,IA,United States,69.37
+Virginia Beach,VA,United States,69.33
+Spokane,WA,United States,69.26
+Bakersfield,CA,United States,69.2
+Montreal,,Canada,69.18
+Gatineau,,Canada,69.17
+Columbus,OH,United States,69.13
+Cincinnati,OH,United States,69.13
+Kansas City,MO,United States,69.05
+Belfast,,United Kingdom,68.77
+San Juan,,Puerto Rico,68.77
+Derby,,United Kingdom,68.68
+Lincoln,NE,United States,68.61
+Malta,,Malta,68.44
+Fort Myers,FL,United States,68.06
+Lexington,KY,United States,67.9
+Fort Worth,TX,United States,67.81
+Omaha,NE,United States,67.8
+Vancouver,WA,United States,67.79
+Madrid,,Spain,67.63
+Surrey,,Canada,67.37
+Montevideo,,Uruguay,67.18
+Wichita,KS,United States,67.02
+Lubbock,TX,United States,66.9
+Chattanooga,TN,United States,66.89
+Phoenix,AZ,United States,66.87
+Sioux Falls,SD,United States,66.85
+Salt Lake City,UT,United States,66.76
+Tulsa,OK,United States,66.71
+Durham,NC,United States,66.44
+Springfield,MO,United States,66.4
+Winston-salem,NC,United States,66.27
+Nicosia,,Cyprus,66.23
+Doha,,Qatar,66.12
+Taichung,,Taiwan,65.98
+Dallas,TX,United States,65.94
+Albuquerque,NM,United States,65.73
+Arlington,TX,United States,65.63
+Madison,WI,United States,65.6
+Ljubljana,,Slovenia,65.47
+Zaragoza (Saragossa),,Spain,65.4
+Mobile,AL,United States,65.31
+Hamilton,,Canada,65.26
+Louisville,KY,United States,65.14
+Beirut,,Lebanon,65.03
+Abu Dhabi,,United Arab,64.97
+Thessaloniki,,Greece,64.94
+Pensacola,FL,United States,64.88
+Athens,,Greece,64.67
+Oklahoma City,OK,United States,64.29
+Kitchener,,Canada,63.9
+Limassol,,Cyprus,63.52
+Huntsville,AL,United States,63.34
+Tucson,AZ,United States,63
+Reno,NV,United States,62.88
+Havana,,Cuba,62.74
+Boise,ID,United States,62.65
+Knoxville,TN,United States,62.18
+Accra,,Ghana,61.93
+College Station,TX,United States,61.85
+Martin,,Slovakia,61.04
+San Antonio,TX,United States,60.92
+Athens,GA,United States,60.55
+Tallinn,,Estonia,60.51
+San Jose,,Costa Rica,60.46
+Valencia,,Spain,60.33
+Kaohsiung,,Taiwan,60.22
+Sevilla,,Spain,60.16
+Larnaca,,Cyprus,59.97
+Sharjah,,United Arab,59.38
+Split,,Croatia,59.05
+Manama,,Bahrain,59
+Rijeka,,Croatia,58.54
+Amman,,Jordan,58.47
+Zagreb,,Croatia,58
+Lisbon,,Portugal,57.69
+Patras,,Greece,57.35
+Panama City,,Panama,57.23
+Malaga,,Spain,57.23
+Campinas,,Brazil,57.21
+Rio De Janeiro,,Brazil,57.14
+Funchal,,Portugal,57
+Santiago,,Chile,56.85
+Sao Paulo,,Brazil,56.83
+Shanghai,,China,56.16
+Buenos Aires,,Argentina,56.05
+Bangkok,,Thailand,55.79
+Makati,,Philippines,55.54
+Tartu,,Estonia,55.49
+Porto,,Portugal,54.92
+Riga,,Latvia,54.87
+Coimbra,,Portugal,54.5
+Granada,,Spain,54.47
+Vilnius,,Lithuania,54.26
+Porto Alegre,,Brazil,53.88
+Brasilia,,Brazil,53.84
+Prague,,Czech Republic,53.84
+Bratislava,,Slovakia,53.64
+Santa Cruz De Tenerife,,Spain,53.34
+Pretoria,,South Africa,53.19
+Phuket,,Thailand,53.17
+Las Palmas,,Spain,52.71
+Kaunas,,Lithuania,52.56
+Recife,,Brazil,52.22
+Klaipeda,,Lithuania,52.09
+Fortaleza,,Brazil,52
+Windhoek,,Namibia,51.84
+Moscow,,Russia,51.82
+Braga,,Portugal,51.43
+Kosice,,Slovakia,51.36
+Muscat,,Oman,51.2
+Budapest,,Hungary,51
+Jeddah (Jiddah),,Saudi Arabia,51
+Johor Bahru,,Malaysia,50.98
+Harare,,Zimbabwe,50.74
+Belo Horizonte,,Brazil,50.41
+Florianopolis,,Brazil,50.4
+Addis Ababa,,Ethiopia,50.3
+Brno,,Czech Republic,50.29
+San Salvador,,El Salvador,50.29
+Al Khobar,,Saudi Arabia,50.18
+Johannesburg,,South Africa,50.02
+Petaling Jaya,,Malaysia,49.8
+Dar Es Salaam,,Tanzania,49.66
+Shenzhen,,China,49.65
+Penang,,Malaysia,49.5
+Guayaquil,,Ecuador,49.49
+Curitiba,,Brazil,49.43
+Phnom Penh,,Cambodia,49.24
+Santo Domingo,,Dominican Republic,49.1
+Irbil,,Iraq,49.08
+Osijek,,Croatia,49.04
+Gdansk,,Poland,49.01
+Ad Dammam,,Saudi Arabia,48.87
+Quito,,Ecuador,48.84
+Warsaw,,Poland,48.31
+Riyadh,,Saudi Arabia,48.21
+Chiang Mai,,Thailand,47.92
+Gdynia,,Poland,47.86
+Kota Kinabalu,,Malaysia,47.75
+Cape Town,,South Africa,47.55
+Pattaya,,Thailand,47.24
+Port Elizabeth,,South Africa,47.09
+Guatemala City,,Guatemala,46.97
+Kuching,,Malaysia,46.79
+Jakarta,,Indonesia,46.47
+Saint Petersburg,,Russia,46.41
+Durban,,South Africa,46.3
+Kuala Lumpur,,Malaysia,46.28
+Wroclaw,,Poland,46.27
+Beijing,,China,46.09
+Baghdad,,Iraq,46.05
+Selangor,,Malaysia,46.04
+Olomouc,,Czech Republic,45.99
+Krakow (Cracow),,Poland,45.79
+Maputo,,Mozambique,45.29
+Poznan,,Poland,45.27
+Debrecen,,Hungary,44.92
+Bydgoszcz,,Poland,44.91
+Ostrava,,Czech Republic,44.78
+Istanbul,,Turkey,44.73
+Podgorica,,Montenegro,44.68
+Szczecin,,Poland,44.61
+Bucharest,,Romania,44.38
+Belgrade,,Serbia,43.99
+Lima,,Peru,43.92
+Bali,,Indonesia,43.73
+Lodz,,Poland,43.68
+Guangzhou,,China,43.5
+Sofia,,Bulgaria,43.11
+Sarajevo,,Bosnia And,42.5
+Manila,,Philippines,42.4
+Lublin,,Poland,42.33
+Katowice,,Poland,42.28
+Varna,,Bulgaria,42.26
+Nairobi,,Kenya,42.06
+Yekaterinburg,,Russia,42.05
+Cebu,,Philippines,41.81
+Timisoara,,Romania,41.62
+Rabat,,Morocco,41.62
+Ho Chi Minh City,,Vietnam,41.28
+Ankara,,Turkey,41.21
+Izmir,,Turkey,40.97
+Burgas,,Bulgaria,40.81
+Cluj-Napoca,,Romania,40.51
+Plovdiv,,Bulgaria,40.29
+Bursa,,Turkey,40.26
+Yogyakarta,,Indonesia,40.01
+Hanoi,,Vietnam,39.89
+Novosibirsk,,Russia,39.86
+Banja Luka,,Bosnia And,39.85
+Nizhny Novgorod,,Russia,39.83
+Iasi,,Romania,39.81
+Suzhou,,China,39.57
+Kazan,,Russia,39.53
+Sibiu,,Romania,39.5
+Tirana,,Albania,39.33
+Chengdu,,China,39.26
+Surabaya,,Indonesia,39.24
+Rostov-na-donu,,Russia,39.1
+Bogota,,Colombia,38.99
+Oradea,,Romania,38.94
+Novi Sad,,Serbia,38.9
+Casablanca,,Morocco,38.81
+Antalya,,Turkey,38.77
+Skopje,,Macedonia,38.51
+Monterrey,,Mexico,38.45
+Cuenca,,Ecuador,38.41
+Brasov,,Romania,38.37
+Ulaanbaatar,,Mongolia,38.13
+Medan,,Indonesia,37.99
+Tehran,,Iran,37.8
+Colombo,,Sri Lanka,37.72
+Bandung,,Indonesia,37.68
+Mexico City,,Mexico,37.54
+Astana,,Kazakhstan,37.51
+Nis,,Serbia,37.32
+Kigali,,Rwanda,37.18
+Algiers,,Algeria,37.13
+Arad,,Romania,36.47
+Asuncion,,Paraguay,36.16
+Santa Cruz,,Bolivia,36.14
+Kathmandu,,Nepal,36.06
+Almaty,,Kazakhstan,36.05
+Medellin,,Colombia,35.87
+Cancun,,Mexico,35.58
+Minsk,,Belarus,35.3
+Gurgaon,,India,34.9
+Craiova,,Romania,34.34
+Guadalajara,,Mexico,34.19
+Tijuana,,Mexico,34.13
+Yerevan,,Armenia,34.12
+Kampala,,Uganda,34.09
+Chisinau,,Moldova,34.06
+Quezon City,,Philippines,33.93
+Hermosillo,,Mexico,33.86
+Davao,,Philippines,33.67
+Dhaka,,Bangladesh,33.64
+Caracas,,Venezuela,33.64
+Queretaro,,Mexico,33.51
+Merida,,Mexico,33.18
+Cali,,Colombia,33.04
+Puerto Vallarta,,Mexico,32.7
+Puebla,,Mexico,32.65
+Mumbai,,India,32.59
+Noida,,India,32.37
+Delhi,,India,32.14
+Baku,,Azerbaijan,31.31
+Valenzuela,,Philippines,31.23
+Islamabad,,Pakistan,30.83
+Bangalore,,India,30.34
+Tunis,,Tunisia,30.06
+Thane,,India,29.82
+Odesa,,Ukraine,29.79
+Tbilisi,,Georgia,29.73
+Pune,,India,29.66
+Lahore,,Pakistan,29.53
+Pristina,,Kosovo (Disputed,29.25
+Chandigarh,,India,29.04
+Ahmedabad,,India,28.67
+Surat,,India,28.66
+Chennai,,India,28.42
+Goa,,India,28.3
+Indore,,India,28.06
+Kolkata,,India,27.99
+Lucknow (Lakhnau),,India,27.55
+Kiev,,Ukraine,27.52
+Jaipur,,India,27.11
+Karachi,,Pakistan,27.1
+Hyderabad,,India,26.92
+Cairo,,Egypt,26.49
+Dnipropetrovsk,,Ukraine,26.39
+Nagpur,,India,26.23
+Bhopal,,India,26.07
+Vadodara,,India,25.59
+Mangalore,,India,25.46
+Lviv,,Ukraine,25.31
+Mysore,,India,25.2
+Bhubaneswar,,India,24.89
+Kharkiv,,Ukraine,24.85
+Visakhapatnam,,India,24.66
+Kochi,,India,24.65
+Coimbatore,,India,24.61
+Alexandria,,Egypt,23.78
+Navi Mumbai,,India,23.44
+Thiruvananthapuram,,India,20.86
