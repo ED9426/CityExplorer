@@ -1,6 +1,6 @@
 //--== CS400 File Header Information ==--
 //Name: Edward Zhao
-//Email: edward.zhao@wisc.edu
+//Email: kzhao65@wisc.edu
 //Team: GE red
 //Role: Data Wrangler
 //TA: Surabhi
