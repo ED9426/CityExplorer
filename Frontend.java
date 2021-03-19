@@ -22,7 +22,7 @@ public class Frontend implements FrontendInterface {
 
     public static void main(String[] args) {
         Backend backend;
-        backend = new Backend(new StringReader(""));
+        backend = new Backend(new StringReader("/Users/austincohen/Documents/Wisconsin 1/CS 400/P02 RedBlackTree/src/CITData.csv"));
         Frontend Ft = new Frontend();
         Ft.run(backend);
     }
