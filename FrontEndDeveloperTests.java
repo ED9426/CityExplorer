@@ -6,7 +6,7 @@ public class FrontEndDeveloperTests {
 
     public void initEach() throws FileNotFoundException {
         Frontend test = new Frontend();
-        test.run(new Backend(new FileReader("CityExplorer/Cost-of-living-2018.csv")));
+        test.run(new Backend(new FileReader("./Cost-of-living-2018.csv")));
     }
 
     @Test
@@ -21,7 +21,7 @@ public class FrontEndDeveloperTests {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream(); // NOT SURE WHAT IT IS DOING
             System.setOut(new PrintStream(outputStream)); // NOT SURE WHAT IT IS DOING
             Frontend test = new Frontend();
-            test.run(new Backend(new FileReader("CityExplorer/Cost-of-living-2018.csv")));
+            test.run(new Backend(new FileReader("./Cost-of-living-2018.csv")));
             System.setOut(standardOut);
             System.setIn(standardIn);
             assertTrue(test != null);

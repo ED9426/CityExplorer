@@ -23,7 +23,7 @@ public class Frontend implements FrontendInterface {
 
     public static void main(String[] args) throws FileNotFoundException {
         Backend backend;
-        backend = new Backend(new FileReader("CityExplorer/Cost-of-living-2018.csv"));
+        backend = new Backend(new FileReader("./Cost-of-living-2018.csv"));
         Frontend Ft = new Frontend();
         Ft.run(backend);
     }
