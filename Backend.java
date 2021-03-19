@@ -41,6 +41,7 @@ public class Backend implements BackendInterface {
 			e.printStackTrace();
 		}
 		//data.add(Boston);
+		System.out.println(data.size());
 		for (int i=0; i<data.size();i++) {
 			System.out.println(i);
 			ht.put(data.get(i).getCity(),data.get(i));

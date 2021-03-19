@@ -153,7 +153,6 @@ public class Frontend implements FrontendInterface {
                 }
             }
         }
-
     }
 
     public List<CityInterface> runCostIndexMode(List<CityInterface> cities) {

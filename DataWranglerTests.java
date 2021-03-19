@@ -7,14 +7,17 @@
 //Lecturer: Gary
 //Notes to Grader: <optional extra notes>
 
+import org.junit.jupiter.api.Test;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.List;
 import java.util.zip.DataFormatException;
-import org.junit.Test;
-import static org.junit.Assert.*;
-
+//import org.junit.Test;
+//import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * This class tests the implementation of CityInterface and
  * CityDataReaderInterface. 
