@@ -11,6 +11,8 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Frontend implements FrontendInterface {
     private Scanner sc;
@@ -22,7 +24,7 @@ public class Frontend implements FrontendInterface {
 
     public static void main(String[] args) {
         Backend backend;
-        backend = new Backend(new StringReader("/Users/austincohen/Documents/Wisconsin 1/CS 400/P02 RedBlackTree/src/CITData.csv"));
+        backend = new Backend(new StringReader("./CITData.csv"));
         Frontend Ft = new Frontend();
         Ft.run(backend);
     }
