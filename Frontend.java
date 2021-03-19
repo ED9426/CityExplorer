@@ -132,25 +132,36 @@ public class Frontend implements FrontendInterface {
                 System.out.println("Do you want to add into the system? [Y]/yes [N]/no");
                 String city = userInput;
                 userInput = sc.next();
-                if (userInput.equals("Y")) {
-                    System.out.println("Please type the state of " + city);
-                    String state = sc.next();
-                    System.out.println("Please type the country of " + city);
-                    String country = sc.next();
-                    System.out.println("Please type the cost index of " + city);
-                    try {
-                        float Cindex = Float.parseFloat(sc.next());
-                        this.backend.addCity(city, Cindex, state, country);
-                    } catch (NumberFormatException e) {
+                while(!userInput.equals("Y")) {
+                    if (userInput.equals("N")) {
+                        System.out.println("Please type the city that you want to add into our city information system. Enter \"x\" to " +
+                                "return the base mode.");
+                    } else {
                         System.out.println("Invalid Input");
+                        System.out.println("Do you want to add into the system? [Y]/yes [N]/no");
+                        userInput = sc.next();
                     }
-                    System.out.println("Successfully add the " + city + " into the city information system");
-                    System.out.println("Please type the city that you want to add into our city information system. Enter \"x\" to " +
-                            "return the base mode.");
-                } else {
-                    System.out.println("Please type the city that you want to add into our city information system. Enter \"x\" to " +
-                            "return the base mode.");
                 }
+                System.out.println("Please type the state of " + city);
+                String state = sc.next();
+                System.out.println("Please type the country of " + city);
+                String country = sc.next();
+                System.out.println("Please type the cost index of " + city + " (0 - 150)");
+                try {
+                    float Cindex = Float.parseFloat(sc.next());
+                    while (Cindex > 150.0 || Cindex < 0.0) {
+                        System.out.println("Invalid Input");
+                        System.out.println("Please type the cost index of " + city + " (0 - 150)");
+                        Cindex = Float.parseFloat(sc.next());
+                    }
+                    this.backend.addCity(city, Cindex, state, country);
+                    System.out.println("Successfully add the " + city + " into the city information system");
+                    System.out.println(this.backend.getCity(city).toString());
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid Input");
+                }
+                System.out.println("Please type the city that you want to add into our city information system. Enter \"x\" to " +
+                        "return the base mode.");
             }
         }
     }
