@@ -1,10 +1,5 @@
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.PrintStream;
-import java.io.StringReader;
-//import org.junit.Test;
-//import static org.junit.Assert.*;
+import java.io.*;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -12,21 +7,9 @@ import org.junit.jupiter.api.Test;
 
 public class FrontEndDeveloperTests {
 
-    public void initEach(){
+    public void initEach() throws FileNotFoundException {
         Frontend test = new Frontend();
-        test.run(new Backend((new StringReader(
-                "City,State,Country,Cost of Living Index\n" +
-                        "Hamilton,,Bermuda,145.43\n" +
-                        "Zurich,,Switzerland,141.25\n" +
-                        "New York,NY,United States,100\n" +
-                        "Nassau,,Bahamas,99.73\n" +
-                        "San Francisco,CA,United States,97.84\n" +
-                        "Rockville,MD,United States,92.66\n" +
-                        "Bloomington,IN,United States,92.14\n" +
-                        "Washington,DC,United States,91.94\n" +
-                        "Arhus,,Denmark,91.9\n" +
-                        "Singapore,,Singapore,91.4"
-        ))));
+        test.run(new Backend(new FileReader("CityExplorer/Cost-of-living-2018.csv")));
     }
 
     @Test
@@ -41,19 +24,7 @@ public class FrontEndDeveloperTests {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream(); // NOT SURE WHAT IT IS DOING
             System.setOut(new PrintStream(outputStream)); // NOT SURE WHAT IT IS DOING
             Frontend test = new Frontend();
-            test.run(new Backend((new StringReader(
-                    "City,State,Country,Cost of Living Index\n" +
-                            "Hamilton,,Bermuda,145.43\n" +
-                            "Zurich,,Switzerland,141.25\n" +
-                            "New York,NY,United States,100\n" +
-                            "Nassau,,Bahamas,99.73\n" +
-                            "San Francisco,CA,United States,97.84\n" +
-                            "Rockville,MD,United States,92.66\n" +
-                            "Bloomington,IN,United States,92.14\n" +
-                            "Washington,DC,United States,91.94\n" +
-                            "Arhus,,Denmark,91.9\n" +
-                            "Singapore,,Singapore,91.4"
-            ))));
+            test.run(new Backend(new FileReader("CityExplorer/Cost-of-living-2018.csv")));
             System.setOut(standardOut);
             System.setIn(standardIn);
             assertTrue(test != null);
@@ -79,7 +50,7 @@ public class FrontEndDeveloperTests {
             System.setOut(standardOut);
             System.setIn(standardIn);
             String Output = outputStream.toString();
-            assertTrue(Output.contains("New York") && Output.contains("Singapore"));
+            assertTrue(Output.contains("Thiruvananthapuram") && Output.contains("Alexandria"));
         } catch (Exception e) {
             System.setOut(standardOut);
             System.setIn(standardIn);
@@ -94,7 +65,7 @@ public class FrontEndDeveloperTests {
         PrintStream standardOut = System.out;
         InputStream standardIn = System.in;
         try {
-            String input = "c" + System.lineSeparator() + "x" + System.lineSeparator() + "x";
+            String input = "c" +  System.lineSeparator() + "York" + System.lineSeparator() + "x" + System.lineSeparator() + "x";
             InputStream inputStreamSimulator = new ByteArrayInputStream(input.getBytes());
             System.setIn(inputStreamSimulator);
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream(); // NOT SURE WHAT IT IS DOING
@@ -103,7 +74,7 @@ public class FrontEndDeveloperTests {
             System.setOut(standardOut);
             System.setIn(standardIn);
             String Output = outputStream.toString();
-            assertTrue(Output.contains("New York") && !Output.contains("Washington") && !Output.contains("Rockville"));
+            assertTrue(Output.contains("York") && !Output.contains("Washington") && !Output.contains("Rockville"));
         } catch (Exception e) {
             System.setOut(standardOut);
             System.setIn(standardIn);
@@ -117,7 +88,9 @@ public class FrontEndDeveloperTests {
         PrintStream standardOut = System.out;
         InputStream standardIn = System.in;
         try {
-            String input = "a" + System.lineSeparator() + "New York" + System.lineSeparator() + "x" + System.lineSeparator() + "x";
+            String input = "a" + System.lineSeparator() + "NewNewYork" + System.lineSeparator() + "Y" + System.lineSeparator() +
+                    "NY" + System.lineSeparator() + "US" + System.lineSeparator() +
+                    "1" + System.lineSeparator() + "x" + System.lineSeparator() + "x";
             InputStream inputStreamSimulator = new ByteArrayInputStream(input.getBytes());
             System.setIn(inputStreamSimulator);
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream(); // NOT SURE WHAT IT IS DOING
@@ -126,7 +99,7 @@ public class FrontEndDeveloperTests {
             System.setOut(standardOut);
             System.setIn(standardIn);
             String Output = outputStream.toString();
-            assertTrue(Output.contains("New York") && !Output.contains("Washington") && !Output.contains("Rockville"));
+            assertTrue(Output.contains("NewNewYork") && !Output.contains("Washington") && !Output.contains("Rockville"));
         } catch (Exception e) {
             System.setOut(standardOut);
             System.setIn(standardIn);
