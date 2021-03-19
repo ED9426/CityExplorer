@@ -7,6 +7,8 @@
 // Lecturer: Florian
 // Notes to Grader: <optional extra notes>
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +24,9 @@ public class Frontend implements FrontendInterface {
         this.sc = new Scanner(System.in);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Backend backend;
-        backend = new Backend(new StringReader("./CITData.csv"));
+        backend = new Backend(new FileReader("CityExplorer/Cost-of-living-2018.csv"));
         Frontend Ft = new Frontend();
         Ft.run(backend);
     }
@@ -55,14 +57,6 @@ public class Frontend implements FrontendInterface {
                 + " given cities ranked by the descending order of city living cost index.");
         List<CityInterface> cities = new ArrayList<>();
         cities = this.backend.getOrderedCities(0, 100);
-        // TODO: initialized without the backend;
-        cities = new ArrayList<CityInterface>();
-        cities.add(new City("LONDON", "XI", "UK", (float) 100.00));
-        cities.add(new City("CAMBRIDGE", "XI", "UK", (float) 100.00));
-        cities.add(new City("OXFORD", "XI", "UK", (float) 100.00));
-        cities.add(new City("YORK", "XI", "UK", (float) 100.00));
-        cities.add(new City("MADISON", "XI", "US", (float) 100.00));
-        cities.add(new City("CHICAGO", "XI", "US", (float) 100.00));
         int lo = 0;
         for (int i = lo; i < cities.size() && i - lo < printlen; i++) {
             System.out.println((i + 1) + ". " + cities.get(i).toString());
