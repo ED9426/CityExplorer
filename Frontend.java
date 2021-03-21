@@ -124,10 +124,6 @@ public class Frontend implements FrontendInterface {
             if (userInput.equals("x")) {
                 break;
             }
-            while (this.backend.getCity(userInput) != null) {
-                userInput = sc.nextLine();
-                System.out.println(userInput + " is already in the system");
-            }
             if (this.backend.getCity(userInput) == null) {
                 System.out.println(userInput + " is not in the system");
                 System.out.println("Do you want to add into the system? [Y]/yes [N]/no");
@@ -170,7 +166,7 @@ public class Frontend implements FrontendInterface {
     public List<CityInterface> runCostIndexMode(List<CityInterface> cities) {
         String userInput = "";
         System.out.println("Welcome to the cost index mode.");
-        System.out.println("Please type the cost index range between 0 - 100. The first number is the lower bound and" +
+        System.out.println("Please type the cost index range between 0 - 150. The first number is the lower bound and" +
                 " the second number is the upper bound. Please separate the index by whitespace \" \"." +
                 "Enter \"x\" to return the base mode.");
 
