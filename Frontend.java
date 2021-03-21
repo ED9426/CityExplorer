@@ -120,9 +120,13 @@ public class Frontend implements FrontendInterface {
         System.out.println("Please type the city that you want to add into our city information system. Enter \"x\" to " +
                 "return the base mode.");
         while (!userInput.equals("x")) {
-            userInput = sc.next();
+            userInput = sc.nextLine();
             if (userInput.equals("x")) {
                 break;
+            }
+            while (this.backend.getCity(userInput) != null) {
+                userInput = sc.nextLine();
+                System.out.println(userInput + " is already in the system");
             }
             if (this.backend.getCity(userInput) == null) {
                 System.out.println(userInput + " is not in the system");
@@ -136,13 +140,13 @@ public class Frontend implements FrontendInterface {
                     } else {
                         System.out.println("Invalid Input");
                         System.out.println("Do you want to add into the system? [Y]/yes [N]/no");
-                        userInput = sc.next();
+                        userInput = sc.nextLine();
                     }
                 }
                 System.out.println("Please type the state of " + city);
-                String state = sc.next();
+                String state = sc.nextLine();
                 System.out.println("Please type the country of " + city);
-                String country = sc.next();
+                String country = sc.nextLine();
                 System.out.println("Please type the cost index of " + city + " (0 - 150)");
                 try {
                     float Cindex = Float.parseFloat(sc.next());
@@ -186,7 +190,7 @@ public class Frontend implements FrontendInterface {
                     System.out.println("Invalid Input");
                 }
             }
-            System.out.println("Please type the cost index range between 0 - 100. The first number is the lower bound and" +
+            System.out.println("Please type the cost index range between 0 - 150. The first number is the lower bound and" +
                     "the second number is the upper bound. Please separate the index by comma \",\"." +
                     "Enter \"x\" to return the base mode.");
         }
@@ -202,7 +206,7 @@ public class Frontend implements FrontendInterface {
         List<CityInterface> cities = new ArrayList<>();
 
         while (!userInput.equals("x")) {
-            userInput = sc.next();
+            userInput = sc.nextLine();
             if (userInput.equals("x")) {
                 break;
             } else {
