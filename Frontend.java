@@ -119,46 +119,60 @@ public class Frontend implements FrontendInterface {
         System.out.println("Welcome to the adding city mode.");
         System.out.println("Please type the city that you want to add into our city information system. Enter \"x\" to " +
                 "return the base mode.");
+        userInput = sc.next();
         while (!userInput.equals("x")) {
+            String city = userInput;
             userInput = sc.nextLine();
-            if (userInput.equals("x")) {
-                break;
+            if (userInput != "") {
+                city += userInput;
             }
-            if (this.backend.getCity(userInput) == null) {
-                System.out.println(userInput + " is not in the system");
-                System.out.println("Do you want to add into the system? [Y]/yes [N]/no");
-                String city = userInput;
-                userInput = sc.next();
-                while(!userInput.equals("Y")) {
-                    if (userInput.equals("N")) {
-                        System.out.println("Please type the city that you want to add into our city information system. Enter \"x\" to " +
-                                "return the base mode.");
-                    } else {
-                        System.out.println("Invalid Input");
-                        System.out.println("Do you want to add into the system? [Y]/yes [N]/no");
-                        userInput = sc.nextLine();
-                    }
-                }
+            if (this.backend.getCity(city) == null) {
+                System.out.println(city + " is not in the system");
                 System.out.println("Please type the state of " + city);
                 String state = sc.nextLine();
                 System.out.println("Please type the country of " + city);
                 String country = sc.nextLine();
                 System.out.println("Please type the cost index of " + city + " (0 - 150)");
-                try {
-                    float Cindex = Float.parseFloat(sc.next());
-                    while (Cindex > 150.0 || Cindex < 0.0) {
+                float Cindex = 0;
+                while (Cindex == 0) {
+                    Cindex = Float.parseFloat(sc.next());
+                    try {
+                        while (Cindex > 150.0 || Cindex < 0.0) {
+                            System.out.println("Invalid Input");
+                            System.out.println("Please type the cost index of " + city + " (0 - 150)");
+                            Cindex = 0;
+
+                        }
+                    } catch (NumberFormatException e) {
                         System.out.println("Invalid Input");
                         System.out.println("Please type the cost index of " + city + " (0 - 150)");
-                        Cindex = Float.parseFloat(sc.next());
                     }
+                }
+                System.out.println("Do you want to add " + city + " into the system? [Y]/yes [N]/no");
+                System.out.println(new City(city, state, country, Cindex).toString());
+                userInput = sc.next();
+                while (!userInput.equals("N") && !userInput.equals("Y")) {
+                    System.out.println("Invalid Input");
+                    System.out.println("Do you want to add " + city + " into the system? [Y]/yes [N]/no");
+                    System.out.println(new City(city, state, country, Cindex).toString());
+                    userInput = sc.next();
+                }
+                if (userInput.equals("N")) {
+                    System.out.println("Do not add city " + city + " into the system");
+                }
+                if (userInput.equals("Y")) {
                     this.backend.addCity(city, Cindex, state, country);
                     System.out.println("Successfully add the " + city + " into the city information system");
                     System.out.println(this.backend.getCity(city).toString());
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid Input");
                 }
                 System.out.println("Please type the city that you want to add into our city information system. Enter \"x\" to " +
                         "return the base mode.");
+                userInput = sc.next();
+            } else {
+                System.out.println(city + " is already in the system");
+                System.out.println("Please type the city that you want to add into our city information system. Enter \"x\" to " +
+                        "return the base mode.");
+                userInput = sc.next();
             }
         }
     }
@@ -167,25 +181,31 @@ public class Frontend implements FrontendInterface {
         String userInput = "";
         System.out.println("Welcome to the cost index mode.");
         System.out.println("Please type the cost index range between 0 - 150. The first number is the lower bound and" +
-                " the second number is the upper bound. Please separate the index by whitespace \" \"." +
-                "Enter \"x\" to return the base mode.");
-
+                " the second number is the upper bound." );
+        System.out.println("Please separate the index by whitespace \" \"." +
+                "Enter \"x\" to return the base mode." );
 
         while (!userInput.equals("x")) {
             userInput = sc.next();
             if (userInput.equals("x")) {
                 break;
-            } else {
-                try {
-                    float lo = Float.parseFloat(userInput);
-                    userInput = sc.next();
-                    float hi = Float.parseFloat(userInput);
+            }
+
+            try {
+                float lo = Float.parseFloat(userInput);
+                userInput = sc.next();
+                float hi = Float.parseFloat(userInput);
+                if (lo >= 0 && hi <= 150) {
                     cities = this.backend.getOrderedCities(lo, hi);
                     System.out.println(cities.size() + " cities found!");
-                } catch (NullPointerException | NumberFormatException e) {
+                } else {
                     System.out.println("Invalid Input");
+                    userInput = sc.next();
                 }
+            } catch (NullPointerException | NumberFormatException e) {
+                System.out.println("Invalid Input");
             }
+
             System.out.println("Please type the cost index range between 0 - 150. The first number is the lower bound and" +
                     "the second number is the upper bound. Please separate the index by comma \",\"." +
                     "Enter \"x\" to return the base mode.");
@@ -200,23 +220,29 @@ public class Frontend implements FrontendInterface {
         System.out.println("Type the city name that you want to search or compare. Enter \"x\" to " +
                 "return the base mode.");
         List<CityInterface> cities = new ArrayList<>();
-
+        userInput = sc.next();
         while (!userInput.equals("x")) {
+            String city = userInput;
             userInput = sc.nextLine();
-            if (userInput.equals("x")) {
-                break;
-            } else {
-                if (this.backend.getCity(userInput) != null) {
-                    cities.add(this.backend.getCity(userInput));
-                } else {
-                    System.out.println(userInput + " is not in the system");
-                }
-                for (int i = 0; i < cities.size(); i++) {
-                    System.out.println((i + 1) + ". " + cities.get(i).toString());
-                }
-                System.out.println("Type the city name that you want to search or compare. Enter \"x\" to " +
-                        "return the base mode.");
+            if (userInput != "") {
+                city += userInput;
             }
+            if (cities.contains(this.backend.getCity(city))) {
+                System.out.println(city + " is already shown");
+            }
+            else {
+                if (this.backend.getCity(city) != null) {
+                    cities.add(this.backend.getCity(city));
+                } else {
+                    System.out.println(city + " is not in the system");
+                }
+            }
+            for (int i = 0; i < cities.size(); i++) {
+                System.out.println((i + 1) + ". " + cities.get(i).toString());
+            }
+            System.out.println("Type the city name that you want to search or compare. Enter \"x\" to " +
+                    "return the base mode.");
+            userInput = sc.next();
         }
 
     }
