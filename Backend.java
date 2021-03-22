@@ -87,12 +87,14 @@ public class Backend implements BackendInterface {
 	public List<CityInterface> getOrderedCities(float a, float b){
 		List<CityInterface> inRange = new ArrayList<CityInterface>();
 		Iterator<CityInterface> treeNodeIterator =rbt.iterator();
+		CityInterface data=new City(null, null, null, null);
 		if (treeNodeIterator.hasNext())
-			if (treeNodeIterator.next().getCostIndex()>=a&&treeNodeIterator.next().getCostIndex()<=b)
-				inRange.add(treeNodeIterator.next());
-		while (treeNodeIterator.hasNext()) {
-			CityInterface data = treeNodeIterator.next();
+			 data = treeNodeIterator.next();
 			if (data.getCostIndex()>=a&&data.getCostIndex()<=b)
+				inRange.add(data);
+		while (treeNodeIterator.hasNext()) {
+			 data = treeNodeIterator.next();
+			//if (data.getCostIndex()>=a&&data.getCostIndex()<=b)
 				inRange.add(data);
 		}
 		return inRange; 
