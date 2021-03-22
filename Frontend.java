@@ -13,6 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Interact the city information system with the user by command line.
+ * @author Hui
+ *
+ */
 public class Frontend implements FrontendInterface {
     private Scanner sc;
     private Backend backend;
@@ -28,6 +33,10 @@ public class Frontend implements FrontendInterface {
         Ft.run(backend);
     }
 
+    /**
+     * This function is used to start the frontend
+     * @param backend the backend used for storing and manipulating the city data.
+     */
     @Override
     public void run(Backend backend) {
         if (backend != null) {
@@ -40,14 +49,16 @@ public class Frontend implements FrontendInterface {
 
     }
 
-    // The BaseMode will show all the cities with a descending order by cost index.
-    // Realized by using the getCity by all the ranges.
-    // User can scroll the list to see the different cities.
-    // type 1- list.size() to scroll the list,
-    // type c to enter the city information mode.
-    // type a to enter the adding city mode.
-    // type # to enter the cost index mode.
-    // type x to exit.
+    /**
+     *The BaseMode will show all the cities with a descending order by cost index.
+     *Realized by using the getCity by all the ranges.
+     *User can scroll the list to see the different cities.
+     *type 1- list.size() to scroll the list,
+     *type c to enter the city information mode.
+     *type a to enter the adding city mode.
+     *type # to enter the cost index mode.
+     *type x to exit.
+     */
     public void runBaseMode() {
         String userInput = "";
         System.out.println("Welcome to the City Information System (CIS). You could type the number to navigate through the"
@@ -99,6 +110,11 @@ public class Frontend implements FrontendInterface {
         }
     }
 
+    /**
+     * @param userInput the string used to convert to an integer
+     * @param size the maximum of the integer that is accepted.
+     * @return If the string can be convert into an integer within 0 and size; it will return to an integer, otherwise return 0
+     */
     // if userInput in 1 to size, return userInput;
     // else return 0;
     private int StringtoInt(String userInput, int size) {
@@ -114,6 +130,9 @@ public class Frontend implements FrontendInterface {
         return num - 1;
     }
 
+    /**
+     * AddCityMode will let the user to add more city into the system.
+     */
     public void runAddCityMode() {
         String userInput = "";
         System.out.println("Welcome to the adding city mode.");
@@ -177,6 +196,11 @@ public class Frontend implements FrontendInterface {
         }
     }
 
+    /**
+     * CostIndexMode will help the user the see the city list under a certain cost index range
+     * @param cities the current city list shown in the frontend
+     * @return the new city list shown in the frontend
+     */
     public List<CityInterface> runCostIndexMode(List<CityInterface> cities) {
         String userInput = "";
         System.out.println("Welcome to the cost index mode.");
@@ -197,7 +221,7 @@ public class Frontend implements FrontendInterface {
                 float hi = Float.parseFloat(userInput);
                 if (lo >= 0 && hi <= 150) {
                     cities = this.backend.getOrderedCities(lo, hi);
-                    System.out.println(cities.size() + " cities found!");
+                    System.out.println(cities.size() + " cities found! Return the base mode to see the city list!");
                 } else {
                     System.out.println("Invalid Input");
                     userInput = sc.next();
@@ -214,6 +238,9 @@ public class Frontend implements FrontendInterface {
 
     }
 
+    /**
+     * User can search and compare the city information by typing the city name.
+     */
     public void runCityInfoMode() {
         String userInput = "";
         System.out.println("Welcome to the city information mode.");
