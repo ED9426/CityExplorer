@@ -94,7 +94,7 @@ public class Backend implements BackendInterface {
 				inRange.add(data);
 		while (treeNodeIterator.hasNext()) {
 			 data = treeNodeIterator.next();
-			//if (data.getCostIndex()>=a&&data.getCostIndex()<=b)
+			if (data.getCostIndex()>=a&&data.getCostIndex()<=b)
 				inRange.add(data);
 		}
 		return inRange; 
