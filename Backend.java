@@ -32,18 +32,13 @@ public class Backend implements BackendInterface {
 	 */
 	public Backend(Reader args) {
 		List<CityInterface> data=new ArrayList<CityInterface>();
-		//City Boston=new City("Boston", "MA", "USA",(float)20);
-		//City NOLA=new City("NOLA", "MA", "USA",(float)20);
 		CityDataReaderInterface cdr = new CityDataReader();
 		try {
 			data= cdr.readDataSet(args);
 		} catch (IOException | DataFormatException e) {
 			e.printStackTrace();
 		}
-		//data.add(Boston);
-		System.out.println(data.size());
 		for (int i=0; i<data.size();i++) {
-			System.out.println(i);
 			ht.put(data.get(i).getCity(),data.get(i));
 			rbt.insert(data.get(i));
 			size++;
@@ -93,10 +88,12 @@ public class Backend implements BackendInterface {
 		List<CityInterface> inRange = new ArrayList<CityInterface>();
 		Iterator<CityInterface> treeNodeIterator =rbt.iterator();
 		if (treeNodeIterator.hasNext())
-			inRange.add(treeNodeIterator.next());
+			if (treeNodeIterator.next().getCostIndex()>=a&&treeNodeIterator.next().getCostIndex()<=b)
+				inRange.add(treeNodeIterator.next());
 		while (treeNodeIterator.hasNext()) {
 			CityInterface data = treeNodeIterator.next();
-			inRange.add(data);
+			if (data.getCostIndex()>=a&&data.getCostIndex()<=b)
+				inRange.add(data);
 		}
 		return inRange; 
 	}
