@@ -193,7 +193,7 @@ public class Frontend implements FrontendInterface {
 
             try {
                 float lo = Float.parseFloat(userInput);
-                userInput = sc.next();
+                userInput = sc.nextLine();
                 float hi = Float.parseFloat(userInput);
                 if (lo >= 0 && hi <= 150) {
                     cities = this.backend.getOrderedCities(lo, hi);
