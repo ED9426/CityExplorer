@@ -8,7 +8,7 @@ Team: red
 
 Files Written by Me:
 --------------------
-Backend.java: Extends BackendInterface and has methods including: a construtor, addCity(), getOrderedCities(), getSize(), & getCity(). 
+Backend.java: Extends BackendInterface and has methods including: a construtor, addCity(), getOrderedCities(), getSize(), & getCity(). Backend for projet. 
 
 BackendDeveloperTests.java: uses JUnit to test Backend.java including methods: testBadInputAddCity(), testGoodInputAddCity(), testGetSize(), testGetOrdedCities(), & testGetCity()
 
@@ -16,7 +16,7 @@ BackendInterface.java: is an interface that is implemented by the Backend has me
 
 Additional Contributions:
 -------------------------
-No additional contribution.
+Assist others with debugging and big picture planning
 
 Signature:
 ----------
