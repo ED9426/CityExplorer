@@ -28,7 +28,7 @@ public class Frontend implements FrontendInterface {
 
     public static void main(String[] args) throws FileNotFoundException {
         Backend backend;
-        backend = new Backend(new FileReader("./Cost-of-living-2018.csv"));
+        backend = new Backend(new FileReader("C:\\Users\\sudhi\\eclipse-workspace\\CityExplorer\\src\\Cost-of-living-2018.csv"));
         Frontend Ft = new Frontend();
         Ft.run(backend);
     }
@@ -64,7 +64,7 @@ public class Frontend implements FrontendInterface {
         System.out.println("Welcome to the City Information System (CIS). You could type the number to navigate through the"
                 + " given cities ranked by the descending order of city living cost index.");
         List<CityInterface> cities = new ArrayList<>();
-        cities = this.backend.getOrderedCities(0, 100);
+        cities = this.backend.getOrderedCities(0, 150);
         int lo = 0;
         for (int i = lo; i < cities.size() && i - lo < printlen; i++) {
             System.out.println((i + 1) + ". " + cities.get(i).toString());
@@ -77,11 +77,12 @@ public class Frontend implements FrontendInterface {
                 "range of living cost index.");
         System.out.println("Enter \"x\" to quit.");
         while (!userInput.equals("x")) {
+           lo = 0;
             userInput = sc.next();
             if (userInput.equals("a") || userInput.equals("c") || userInput.equals("#") || userInput.equals("x")) {
                 if (userInput.equals("a")) {
                     runAddCityMode();
-                    cities = this.backend.getOrderedCities(0,100);
+                    cities = this.backend.getOrderedCities(0,150);
                 } else if (userInput.equals("c")) {
                     runCityInfoMode();
                 } else if (userInput.equals("#")) {
@@ -231,8 +232,9 @@ public class Frontend implements FrontendInterface {
             }
 
             System.out.println("Please type the cost index range between 0 - 150. The first number is the lower bound and" +
-                    "the second number is the upper bound. Please separate the index by comma \",\"." +
-                    "Enter \"x\" to return the base mode.");
+                " the second number is the upper bound." );
+            System.out.println("Please separate the index by whitespace \" \"." +
+                "Enter \"x\" to return the base mode." );
         }
         return cities;
 
